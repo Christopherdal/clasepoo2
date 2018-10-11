@@ -1,0 +1,98 @@
+// *Definicion de Clases*
+
+Clase Alumno
+
+	Definir Nombre Como Alfanumerico
+	Definir Cedula Como Alfanumerico
+	Definir Expediente Como Alfanumerico
+	Definir Nota1 Como Entero
+	Definir Nota2 Como Entero
+	Definir Nota3 Como Entero
+	Definir Evaluacion_Cont Como Entero
+	Definir Nota_Trabajo Como Entero
+
+	Metodo Registrar_Notas
+			Mostrar "Nombre del Alumno: " Sin Saltar
+			Leer Nombre
+			Mostrar ""
+			Mostrar "Cedula del Alumno: " Sin Saltar
+			Leer Cedula
+			Mostrar ""
+			Mostrar "Expediente del Alumno: " Sin Saltar
+			Leer Expediente
+			Mostrar ""
+			Mostrar "Nota del Primer Examen: " Sin Saltar
+			Leer Nota1
+			Mostrar ""
+			Mostrar "Nota del Segundo Examen: " Sin Saltar
+			Leer Nota2
+			Mostrar ""
+			Mostrar "Nota del Tercer Examen: " Sin Saltar
+			Leer Nota3
+			Mostrar ""
+			Mostrar "Nota de la Evaluacion Continua: " Sin Saltar
+			Leer Alumno1.Evaluacion_Cont
+			Mostrar ""
+			Mostrar "Nota del Trabajo: " Sin Saltar
+			Leer Nota_Trabajo
+			Mostrar ""
+	Fin Metodo
+	Metodo Procesar_Notas
+			Nota_Total = Nota1 + Nota2 + Nota3 + Evaluacion_Cont + Nota_Trabajo
+			Nota_Total_20 = Nota_Total / 5
+			Nota_Total_4 = Nota_Total_20 / 5
+	Fin Metodo
+	Metodo Salida
+			Mostrar "La Nota Final de " Nombre " es " Nota_Total
+			Mostrar ""
+			Mostrar "La Nota en Base de 20 es: " Nota_Total_20
+			Mostrar ""
+			Mostrar "La Nota en Base de 4 es: " Nota_Total_4
+			Mostrar ""
+	Fin Metodo
+
+Fin Clase
+
+//Cuerpo Principal
+
+Algoritmo Universidad
+
+//Instanciacion de Objetos
+
+		Definir Alumno1 Como Alumno
+		Definir Alumno2 Como Alumno
+		Definir Alumno3 Como Alumno
+		Definir Alumno4 Como Alumno
+		Definir Alumno5 Como Alumno
+
+		Alumno1 = Nuevo Alumno()
+		Alumno2 = Nuevo Alumno()
+		Alumno3 = Nuevo Alumno()
+		Alumno4 = Nuevo Alumno()
+		Alumno5 = Nuevo Alumno()
+
+//Entrada de Datos
+
+		Alumno1.Registrar_Notas()
+		Alumno2.Registrar_Notas()
+		Alumno3.Registrar_Notas()
+		Alumno4.Registrar_Notas()
+		Alumno5.Registrar_Notas()
+
+//Calculo de los Procesos
+
+		Alumno1.Procesar_Notas()
+		Alumno2.Procesar_Notas()
+		Alumno3.Procesar_Notas()
+		Alumno4.Procesar_Notas()
+		Alumno5.Procesar_Notas()
+
+//Salida de Informacion
+
+		Alumno1.Salida()
+		Alumno2.Salida()
+		Alumno3.Salida()
+		Alumno4.Salida()
+		Alumno5.Salida()
+
+Fin Algoritmo

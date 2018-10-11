@@ -1,0 +1,22 @@
+clase operacion_matematica()
+
+publico metodo suma_directa() Como Real
+ retornar numero1 + numero2
+
+fin metodo
+
+fin clase
+
+algoritmo
+ definir suma como operacion_matematica
+suma=nueva suma()
+
+
+numero1=450
+suma.suma_directa(numero1,100)
+
+
+
+
+
+fin algoritmo

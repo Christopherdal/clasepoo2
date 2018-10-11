@@ -1,0 +1,65 @@
+Clase Libro
+
+	Privado Definir nombre Como Caracter
+	Privado Definir autor Como Caracter
+	Privado Definir editorial Como Caracter
+	Privado Definir fecha_publicacion Como Caracter
+	Privado Definir tipo Como Caracter
+	Privado Definir ilustrado Como Logico
+	Privado Definir precio Como Real
+
+	Metodo Libro()
+		nombre = "To be Announced"
+		autor = "To be Announced"
+		editorial = "To be Decided"
+		fecha_publicacion = "01/01/2000"
+		tipo = "To be Announced"
+		ilustrado = Falso
+		precio = 0
+	Fin Metodo
+
+	Publico Metodo Libro(nombre_libro, autor_libro, editorial_libro, fecha_publicacion_libro, tipo_libro, ilustrado_libro, precio_libro)
+		nombre = nombre_libro
+		autor = autor_libro
+		editorial = editorial_libro
+		fecha_publicacion = fecha_publicacion_libro
+		tipo = tipo_libro
+		ilustrado = ilustrado_libro
+		precio = precio_libro
+	Fin Metodo
+
+	Publico Metodo calculo_precio()
+		Definir iva Como Real
+
+		iva = precio * 0.12
+		precio = precio + iva
+		Retornar precio
+	Fin Metodo
+
+	Publico Metodo Salida()
+		Mostrar "Nombre del Libro: " nombre
+		Mostrar "Nombre del Autor: " autor
+		Mostrar "Nombre de la editorial: " editorial
+		Mostrar "Fecha de Publicacion: " fecha_publicacion
+		Mostrar "Tipo de Libro: " tipo
+		Si (ilustrado = Verdadero) Entonces
+			{Mostrar "Este Libro Tiene Ilustraciones"}
+		Sino
+			{Mostrar "Este Libro no Tiene Ilustraciones"}
+		Mostrar "Precio del Libro: " calculo_precio()
+		Mostrar ""
+	Fin Metodo
+
+Fin Clase
+
+Algoritmo Registro_Biblioteca
+
+	Definir libro1, libro2 Como Libro
+
+	libro1 = Nuevo Libro()
+	libro2 = Nuevo Libro("El Castillo Volador", "Hayao Miyazaki", "Ghibli", "02/08/1986", "Fantasia", Verdadero, 500)
+
+	libro1.Salida()
+	libro2.Salida()
+
+Fin Algoritmo

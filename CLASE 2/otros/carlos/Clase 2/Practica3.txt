@@ -1,0 +1,102 @@
+Clase Persona
+
+	Privado Definir nombre Como Caracter
+	Privado Definir cedula Como Caracter
+	Privado Definir edad Como Entero
+	Privado Definir telefono Como Caracter
+	Privado Definir direccion Como Caracter
+	Privado Definir trabajo Como Caracter
+	Privado Definir sueldo Como Real
+	Privado Definir horas_trabajo Como Entero
+
+	Metodo setnombre(nuevo_nombre Como Caracter)
+		nombre = nuevo_nombre
+	Fin Metodo
+
+	Metodo setcedula(nuevo_cedula Como Caracter)
+		cedula = nuevo_cedula
+	Fin Metodo
+
+	Metodo setedad(nuevo_edad Como Entero)
+		edad = nuevo_edad
+	Fin Metodo
+
+	Metodo settelefono(nuevo_telefono Como Caracter)
+		telefono = nuevo_telefono
+	Fin Metodo
+
+	Metodo setdireccion(nuevo_direccion Como Caracter)
+		direccion = nuevo_direccion
+	Fin Metodo
+
+	Metodo settrabajo(nuevo_trabajo Como Caracter)
+		trabajo = nuevo_trabajo
+	Fin Metodo
+
+	Metodo setsueldo(nuevo_sueldo Como Real)
+		sueldo = nuevo_sueldo
+	Fin Metodo
+
+	Metodo sethoras(nuevo_horas Como Entero)
+		horas_trabajo = nuevo_horas
+	Fin Metodo
+
+	Metodo getnombre() Como Caracter
+		Retornar nombre
+	Fin Metodo
+
+	Metodo getcedula() Como Caracter
+		Retornar cedula
+	Fin Metodo
+
+	Metodo getedad() Como Entero
+		Retornar edad
+	Fin Metodo
+
+	Metodo gettelefono() Como Caracter
+		Retornar telefono
+	Fin Metodo
+
+	Metodo getdireccion() Como Caracter
+		Retornar direccion
+	Fin Metodo
+
+	Metodo gettrabajo() Como Caracter
+		Retornar trabajo
+	Fin Metodo
+
+	Metodo getsueldo() Como Real
+		Retornar sueldo
+	Fin Metodo
+
+	Metodo gethoras() Como Entero
+		Retornar horas_trabajo
+	Fin Metodo
+
+Fin Clase
+
+Algoritmo Registro_Personas
+
+	Definir persona1 Como Persona
+
+	persona1 = new Persona
+
+	persona1.setnombre("Pedro Leon Torres")
+	persona1.setcedula("0000010")
+	persona1.setedad(50)
+	persona1.setdireccion("Av. Pedro Leon Torres")
+	persona1.settelefono("No Tiene")
+	persona1.settrabajo("Salvar el Mundo")
+	persona1.setsueldo(0)
+	persona1.sethoras(9999999999)
+
+	Mostrar persona1.getnombre()
+	Mostrar persona1.getcedula()
+	Mostrar persona1.getedad()
+	Mostrar persona1.gettelefono()
+	Mostrar persona1.getdireccion()
+	Mostrar persona1.gettrabajo()
+	Mostrar persona1.getsueldo()
+	Mostrar persona1.gethoras()
+
+Fin Algoritmo

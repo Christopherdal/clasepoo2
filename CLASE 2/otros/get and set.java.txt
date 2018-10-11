@@ -1,0 +1,30 @@
+clase persona
+Definir nombre como caracter
+
+metodo setNombre(nuevo_nombre como caracter) 
+      Atributo=nuevo_nombre 
+fin metodo
+
+metodo getNombre()como caracter
+      Retonar nombre 
+fin metodo
+fin clase 
+-------------------------------------------
+Algoritmo
+Definir  humano como persona
+
+humano=new persona()
+
+humano.setNombre("Pedro Leon Torres")
+
+Mostrar humano.getNombre()
+
+
+fin Algoritmo
+
+
+
+
+
+
+

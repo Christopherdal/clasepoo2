@@ -1,0 +1,55 @@
+clase Fecha
+definir dia como entero
+definir mes como entero
+definir año como entero
+
+metodo mostrarfecha(dia, mes, año)
+	mostrar dia"/"mes"/"año
+
+finmetodo
+
+finclase
+
+clase Libro
+privado definir nombre como caracter
+publico definir autor como como caracter
+publico definir editorial como caracter
+publico definir cant_paginas entero
+publico definir fecha_publicacion como fecha
+publico definir tipo_libro como caracter
+publico definir ilustrado como logico
+
+metodo mostrardatos() 
+
+	nombre="una vida sin aire"
+	autor="armando paredes"
+	editorial="paredes firmes"
+	cant_paginas="300pg"
+	tipo_libro="estilo de vida"
+	ilustrado=true
+
+finmetodo
+
+metodo mostrardatos(nombre, autor, editorial, cant_paginas, tipo_libro, ilustrado)
+
+mostrar nombre, autor, editorial, cant_paginas, tipo_libro, ilustrado
+
+	mostrarfecha(1,4,2017)
+	
+
+	
+finmetodo
+
+finclase
+
+
+algoritmo
+definir libro como Libro
+	
+	libro=Nuevo	Libro()
+
+	libro.mostrardatos()
+	libro.mostrardatos(nombre, autor, editorial, cant_paginas, tipo_libro, ilustrado)
+
+
+finalgoritmo

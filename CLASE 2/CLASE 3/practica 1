@@ -1,0 +1,59 @@
+clase Alumno
+privado definir nota1 como entero
+privado definir nota2 como entero
+
+metodo getcalcular_nota()
+	para i=1 hasta 3 hacer
+
+	mostrar "ingrese nota1"
+	mostrar "ingrese nota2"
+
+		retornar notafinal=nota1+nota2
+
+		acumulador=acumulador+notafinal
+	finpara
+
+algoritmo 
+
+definir alumno1 alumno2 como Alumno
+
+alumno1=Nuevo Alumno()
+alumno2=Nuevo Alumno()
+
+para i=1 hasta 3 hacer
+
+alumno1.calcular_nota()
+
+alumno2.calcular_nota()
+
+finpara
+
+
+si (alumno1.getcalcular_nota()=alumno2.getcalcular_nota())
+
+entonces mostrar "las notas de los Alumnos son iguales"
+sino
+	entoces mostrar "las notas de los alumnos no son iguales"
+finsi
+
+
+si alumno1.getcalcular_nota>=80
+	entonces mostrar "el alumno 1: aprobo"
+sino 
+	entonces mostrar "el alumno 1: reprobo"
+
+finsi
+
+
+
+si alumno2.getcalcular_nota>=80
+	entonces mostrar "el alumno 2: aprobo"
+sino 
+	entonces mostrar "el alumno 2: reprobo"
+
+finsi
+
+
+
+finalgoritmo
+

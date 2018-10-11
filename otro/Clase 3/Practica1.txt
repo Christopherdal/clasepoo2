@@ -1,0 +1,152 @@
+// *Definicion de Clases*
+
+Clase Alumno
+
+	Privado Definir Nombre Como Alfanumerico
+	Privado Definir Cedula Como Alfanumerico
+	Privado Definir Expediente Como Alfanumerico
+	Privado Definir Nota1 Como Entero
+	Privado Definir Nota2 Como Entero
+	Privado Definir Nota3 Como Entero
+	Privado Definir Evaluacion_Cont Como Entero
+	Privado Definir Nota_Trabajo Como Entero
+	Privado Definir Nota_Total Como Entero
+	Privado Definir Nota_Total_20 Como Entero
+	Privado Definir Nota_Total_4 Como Entero
+	Privado Definir Cantidad_Lapsos Como Entero
+	Publico Definir Nuevo_Nombre Como Caracter
+
+	Publico Metodo Registrar_Notas
+		x = x + 1
+		Mostrar "Lapso Nroª " x  Sin Saltar
+		Leer Nombre
+		Mostrar ""
+		Mostrar "Cedula del Alumno: " Sin Saltar
+		Leer Cedula
+		Mostrar ""
+		Mostrar "Expediente del Alumno: " Sin Saltar
+		Leer Expediente
+		Mostrar ""
+		Mostrar "Nota del Primer Examen: " Sin Saltar
+		Leer Nota1
+		Mostrar "Nota del Segundo Examen: " Sin Saltar
+		Leer Nota2
+		Mostrar "Nota del Tercer Examen: " Sin Saltar
+		Leer Nota3
+		Mostrar "Nota de la Evaluacion Continua: " Sin Saltar
+		Leer Alumno1.Evaluacion_Cont
+		Mostrar "Nota del Trabajo: " Sin Saltar
+		Leer Nota_Trabajo
+		Mostrar ""
+	Fin Metodo
+
+	Publico Metodo Procesar_Notas(Nota1, Nota2, Nota3, Evaluacion_Cont, Nota_Trabajo)
+			Nota_Total = Nota1 + Nota2 + Nota3 + Evaluacion_Cont + Nota_Trabajo
+			Retornar Nota_Total
+	Fin Metodo
+
+	Publico Metodo Aprobacion()
+		Si (Nota_Total >= 90) Entonces
+				Mostrar "Usted Aprobo con Exelentes Notas"
+			Sino 
+				Si (Nota_Total >= 80) Entonces
+					Mostrar "Usted Aprobo"
+				Sino 
+					Mostrar "Usted Reprobo"
+	Fin Metodo
+
+	Publico Metodo Notas_20(Nota_Total)
+		Nota_Total_20 = Nota_Total / 5
+		Retornar Nota_Total_20
+	Fin Metodo
+
+	Publico Metodo Notas_4(Nota_Total)
+		Nota_Total_4 = Nota_Total / 25
+		Retornar Nota_Total_4
+	Fin Metodo
+
+	Publico Metodo Nota_Año()
+		Metodo "Nombre del Alumno:" Sin Saltar
+		Leer Nuevo_Nombre
+		setNombre(Nuevo_Nombre)
+		Para i=1 Hasta Cantidad_Lapsos - 1 Hacer
+			Registrar_Notas()
+			Procesar_Notas()
+			Nota_Año = Nota_Año + Nota_Total
+		Fin Para
+		Nota_Total = Nota_Año / Cantidad_Lapsos
+	Fin Metodo
+
+	Publico getNotatotal() Como Entero
+		Retornar Nota_Total
+	Fin Metodo
+
+	Publico Metodo Salida()
+		Mostrar "La Nota Final de " Nombre " es: " getNotatotal()
+		Mostrar ""
+		Mostrar "La Nota en Base de 20 es: " Notas_20()
+		Mostrar ""
+		Mostrar "La Nota en Base de 4 es: " Notas_4()
+		Mostrar ""
+		Mostrar "Calificacion: " Aprobacion()
+		Mostrar ""
+	Fin Metodo
+
+	Publico Metodo getNotatotal() Como Entero
+		Retornar Nota_Total
+	Fin Metodo
+
+	Publico Metodo getNombre() Como Caracter
+		Retornar Nombre
+	Fin Metodo
+
+	Publico Metodo setNombre(Nuevo_Nombre)
+		Nombre = Nuevo_Nombre
+	Fin Metodo
+
+Fin Clase
+
+//Cuerpo Principal
+
+Algoritmo Universidad
+
+//Instanciacion de Objetos
+
+	Definir Alumno1 Como Alumno
+	Definir Alumno2 Como Alumno
+	Definir Alumno3 Como Alumno
+	Definir Alumno4 Como Alumno
+	Definir Alumno5 Como Alumno
+	Alumno1 = Nuevo Alumno()
+	Alumno2 = Nuevo Alumno()
+	Alumno3 = Nuevo Alumno()
+	Alumno4 = Nuevo Alumno()
+	Alumno5 = Nuevo Alumno()
+
+//Entrada de Datos
+
+	Alumno1.Nota_Año()
+	Alumno2.Nota_Año()
+	Alumno3.Nota_Año()
+	Alumno4.Nota_Año()
+	Alumno5.Nota_Año()
+
+//Salida de Informacion
+
+	Alumno1.Salida()
+	Alumno2.Salida()
+	Alumno3.Salida()
+	Alumno4.Salida()
+	Alumno5.Salida()
+
+	Mostrar ""
+
+	Si (Alumno1.getNotatotal() = Alumno2.getNotatotal()) Entonces
+		Mostrar "Los Dos Alumnos Tienen la Misma Nota"
+	Sino
+		Si (Alumno1.getNotatotal() > Alumno2.getNotatotal()) Entonces
+			Mostrar Alumno1.getNombre() " Tiene una Calificacion más Alta que " Alumno2.getNombre()
+		Sino 
+			Mostrar Alumno2.getNombre() " Tiene una Calificacion más Alta que " Alumno1.getNombre()
+
+Fin Algoritmo
